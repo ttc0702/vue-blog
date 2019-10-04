@@ -7,7 +7,7 @@ import {Message} from 'element-ui'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 
 // axios 默认的根url
-axios.defaults.baseURL = 'http://blog-server.hunger-valley.com'
+axios.defaults.baseURL = 'https://blog-server.hunger-valley.com'
 
 // 可以跨源访问
 axios.defaults.withCredentials = true
