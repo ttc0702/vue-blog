@@ -1,15 +1,15 @@
 <template>
   <header :class="{login:isLogin,'no-login':!isLogin}">
     <template v-if="!isLogin">
-      <h1><router-link to='/'>Let's Share</router-link></h1>
+      <h1><router-link to='/'>We Share</router-link></h1>
       <p>精品博客汇聚</p>
       <div class="btns">
         <router-link to="/register"><el-button>立即注册</el-button></router-link> 
         <router-link to="/login"><el-button>立即登录</el-button></router-link>
       </div>
     </template>
-    <template v-else >
-      <h1><router-link to='/'>Let's Share</router-link></h1>
+    <template v-else>
+      <h1><router-link to='/'>We Share</router-link></h1>
       <router-link to='/create'><i class="edit el-icon-edit" title="新建博客"></i></router-link>
       <div class="user">
         <img class="avatar" :src="user.avatar" :alt="user.username" :title="user.username"> 

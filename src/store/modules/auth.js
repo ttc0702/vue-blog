@@ -23,7 +23,6 @@ const mutations = {
     }
 }
 const actions = {
-
     // 用户登录  {commit} 是默认参数，相当于 context.commit，使用了 ES6 的参数结构
     login({commit}, {username, password}) {
         // 调用底层接口，返回的是一个 Promise 对象
@@ -52,9 +51,9 @@ const actions = {
             return true
         }
 
+        // 如果本地没有这个状态，就发ajax请求去服务器，服务器会返回一个isLogin的响应，根据这个值来确定是否登录
         let res = await auth.getInfo()
         commit('setLogin', {isLogin: res.isLogin})
-        // 如果本地没有这个状态，就发ajax请求去服务器，服务器会返回一个isLogin的响应，根据这个值来确定是否登录
         if (!res.isLogin) return false
 
         commit('setUser', {user: res.data})
